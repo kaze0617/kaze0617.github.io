@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>樱花庄的风 | かぜ·しろ·ましろ</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2020-03-21T15:37:18.602Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>kaze</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2020/10/06/hello-world/"/>
+    <id>/2020/10/06/hello-world/</id>
+    <published>2020-10-06T01:19:54.118Z</published>
+    <updated>2020-03-21T15:37:18.602Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>downloadtest</title>
+    <link href="/2020/04/11/downloadtest/"/>
+    <id>/2020/04/11/downloadtest/</id>
+    <published>2020-04-11T04:44:28.000Z</published>
+    <updated>2020-10-13T15:34:23.166Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AppleALC.kext声卡驱动支持的硬件型号与ID速查列表</title>
+    <link href="/2020/03/31/AppleALC-kext%E5%A3%B0%E5%8D%A1%E9%A9%B1%E5%8A%A8%E6%94%AF%E6%8C%81%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%9E%8B%E5%8F%B7%E4%B8%8EID%E9%80%9F%E6%9F%A5%E5%88%97%E8%A1%A8/"/>
+    <id>/2020/03/31/AppleALC-kext声卡驱动支持的硬件型号与ID速查列表/</id>
+    <published>2020-03-31T10:07:06.000Z</published>
+    <updated>2020-10-13T15:34:21.648Z</updated>
+    
+    <summary type="html">
+    
+      AppleALC.kext声卡驱动支持的硬件型号与ID速查列表
+    
+    </summary>
+    
+      <category term="支持" scheme="/categories/%E6%94%AF%E6%8C%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>黑苹果必备:Intel核显platform ID整理及smbios速查表</title>
+    <link href="/2020/03/31/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%BF%85%E5%A4%87Intel%E6%A0%B8%E6%98%BEplatformID%E6%95%B4%E7%90%86%E5%8F%8Asmbios%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
+    <id>/2020/03/31/黑苹果必备Intel核显platformID整理及smbios速查表/</id>
+    <published>2020-03-31T09:11:50.000Z</published>
+    <updated>2020-10-13T15:34:07.885Z</updated>
+    
+    <summary type="html">
+    
+      驱动你的核心显卡。
+    
+    </summary>
+    
+      <category term="支持" scheme="/categories/%E6%94%AF%E6%8C%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>黑苹果显卡免驱列表（15.x~）</title>
+    <link href="/2020/03/31/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%98%BE%E5%8D%A1%E5%85%8D%E9%A9%B1%E5%88%97%E8%A1%A8%EF%BC%8815-x-%EF%BC%89/"/>
+    <id>/2020/03/31/黑苹果显卡免驱列表（15-x-）/</id>
+    <published>2020-03-31T09:08:33.000Z</published>
+    <updated>2020-10-13T15:34:16.394Z</updated>
+    
+    <summary type="html">
+    
+      AMD显卡 支持的显卡型号 RX 5700 RX 5700 XT RX 5700 XT 50周年纪念版 注意：大多数Navi卡都需 …
+    
+    </summary>
+    
+      <category term="支持" scheme="/categories/%E6%94%AF%E6%8C%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>黑苹果显卡免驱列表（10.x~10.14.x）</title>
+    <link href="/2020/03/31/%E9%BB%91%E8%8B%B9%E6%9E%9C%E6%98%BE%E5%8D%A1%E5%85%8D%E9%A9%B1%E5%88%97%E8%A1%A8%EF%BC%8810-x-10-14-x%EF%BC%89/"/>
+    <id>/2020/03/31/黑苹果显卡免驱列表（10-x-10-14-x）/</id>
+    <published>2020-03-31T09:07:55.000Z</published>
+    <updated>2020-10-13T15:34:09.425Z</updated>
+    
+    <summary type="html">
+    
+      写在前面： 由于nVidia不再发布最新的Web Drivers驱动程序，使得大部分n卡无法在macos 10.14 mojave …
+    
+    </summary>
+    
+      <category term="支持" scheme="/categories/%E6%94%AF%E6%8C%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于EFI中驱动的含义</title>
+    <link href="/2020/03/30/%E5%85%B3%E4%BA%8EEFI%E4%B8%AD%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%90%AB%E4%B9%89/"/>
+    <id>/2020/03/30/关于EFI中驱动的含义/</id>
+    <published>2020-03-30T08:19:59.000Z</published>
+    <updated>2020-10-13T15:34:06.916Z</updated>
+    
+    <summary type="html">
+    
+      理解他的含义，才能更好的安装。
+    
+    </summary>
+    
+      <category term="支持" scheme="/categories/%E6%94%AF%E6%8C%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>黑苹果AMD cpu支持列表</title>
+    <link href="/2020/03/29/%E9%BB%91%E8%8B%B9%E6%9E%9CAMDcpu%E6%94%AF%E6%8C%81%E5%88%97%E8%A1%A8/"/>
+    <id>/2020/03/29/黑苹果AMDcpu支持列表/</id>
+    <published>2020-03-29T04:21:36.000Z</published>
+    <updated>2020-10-13T15:34:18.762Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;转载自&lt;a href=&quot;http://hac.fangf.cc/archives/349&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hac的小窝&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;目前，支持黑苹果的AMD-CPU主要是以下几种&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="支持" scheme="/categories/%E6%94%AF%E6%8C%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>suibi</title>
+    <link href="/2020/03/26/suibi/"/>
+    <id>/2020/03/26/suibi/</id>
+    <published>2020-03-26T05:38:02.000Z</published>
+    <updated>2020-10-14T03:58:34.368Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-Sakura</title>
+    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
+    <published>2018-12-12T14:16:01.000Z</published>
+    <updated>2020-04-22T02:43:49.779Z</updated>
+    
+    <summary type="html">
+    
+      hexo-sakura主题使用教程
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+</feed>

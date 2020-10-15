@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Hello World | 樱花庄的风 | かぜ·しろ·ましろ</title>
+  
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <!-- <link rel="stylesheet" href="/css/zoom.css" media="all"> -->
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <!-- 自定义logo -->
+  <link rel="stylesheet" type="text/css" href="/css/logo.css">
+  <link rel="stylesheet" type="text/css" href="/fonts/LOGO/logo.css">
+  <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+    /*Initial Variables*/
+    var mashiro_option = new Object();
+    var mashiro_global = new Object();
+    mashiro_option.NProgressON = true;
+    /* 
+     * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+     * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+     */
+    mashiro_option.email_domain = "";
+    mashiro_option.email_name = "";
+    mashiro_option.cookie_version_control = "";
+    mashiro_option.qzone_autocomplete = false;
+    mashiro_option.site_name = "樱花庄的风";
+    mashiro_option.author_name = "风";
+    mashiro_option.site_url = "https://kaze0617.gitee.io/";
+    mashiro_option.v_appId = "Aiy3G092H2AXI5Ad0mFMBugP-MdYXbMMI";
+    mashiro_option.v_appKey = "CoDqXAC8Qk2n7Nw1ikqhNmvk";
+    mashiro_option.mathjax = "0";
+    mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
+    mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+    // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+    // mashiro_option.float_player_on = true;
+
+    /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+    var bg = "/images/cover/0.jpg,/images/cover/1.jpg,/images/cover/2.jpg,/images/cover/3.jpg,/images/cover/4.jpg,/images/cover/5.jpg,/images/cover/6.jpg,/images/cover/7.jpg,/images/cover/8.jpg,/images/cover/9.jpg,/images/cover/10.jpg".split(",");
+    var bgindex = Math.floor(Math.random() * bg.length);
+    if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+      alert('朋友，IE浏览器未适配哦~');
+    }
+  </script>
+  <style type="text/css">
+    .hljs-ln {
+      border-collapse: collapse
+    }
+
+    .hljs-ln td {
+      padding: 0
+    }
+
+    .hljs-ln-n:before {
+      content: attr(data-line-number)
+    }
+  </style>
+  <style type="text/css">
+    .site-top .lower nav {
+      display: block !important;
+    }
+
+    .author-profile i,
+    .post-like a,
+    .post-share .show-share,
+    .sub-text,
+    .we-info a,
+    span.sitename,
+    .post-more i:hover,
+    #pagination a:hover,
+    .post-content a:hover,
+    .float-content i:hover {
+      color: #FE9600
+    }
+
+    .feature i,
+    .download,
+    .navigator i:hover,
+    .links ul li:before,
+    .ar-time i,
+    span.ar-circle,
+    .object,
+    .comment .comment-reply-link,
+    .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
+      background: #FE9600
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #FE9600
+    }
+
+    .download,
+    .navigator i:hover,
+    .link-title,
+    .links ul li:hover,
+    #pagination a:hover,
+    .comment-respond input[type='submit']:hover {
+      border-color: #FE9600
+    }
+
+    .entry-content a:hover,
+    .site-info a:hover,
+    .comment h4 a,
+    #comments-navi a.prev,
+    #comments-navi a.next,
+    .comment h4 a:hover,
+    .site-top ul li a:hover,
+    .entry-title a:hover,
+    #archives-temp h3,
+    span.page-numbers.current,
+    .sorry li a:hover,
+    .site-title a:hover,
+    i.iconfont.js-toggle-search.iconsearch:hover,
+    .comment-respond input[type='submit']:hover {
+      color: #FE9600
+    }
+
+    .comments .comments-main {
+      display: block !important;
+    }
+
+    .comments .comments-hidden {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript">
+    if (("standalone" in window.navigator) && window.navigator.standalone) {
+      var noddy, remotes = false;
+      document.addEventListener('click', function (event) {
+        noddy = event.target;
+        while (noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if ('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !==
+            -1 || remotes)) {
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      }, false);
+    }
+  </script>
+</head></html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-grid">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, KAZE!">Hi, KAZE!</h1>
+        <!-- <a href="https://kaze0617.gitee.io/">
+          <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/custom/avatar.jpg">
+        </a> -->
+      </div>
+      <div class="header-info">
+        <p>Live your life with passion! With some drive!</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/kaze0617" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1515097306&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/social/qq.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://gitee.com/kaze0617" target="_blank" class="social-github" title="gitee">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/social/gitee.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container">
+    <video style="object-fit: fill" id="bgvideo" class="video" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink logo">
+            <a href="/">
+                <ruby>
+                <span class="sakuraso">さくら荘</span>
+                <span class="no">の</span>
+                <span class="shironeko">风</span>
+                <rp></rp>
+                <rt class="logo">樱花庄的风</rt>
+                <rp></rp>
+                </ruby>
+              </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+            <li>
+              <a href="/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                  首页
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/archives">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                  归档
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/技术/">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    技术
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/随笔/">
+                    <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                    随笔
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/转载/">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    转载
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                  清单
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/tags/悦读/">
+                    <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                    书单
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/bangumi/">
+                    <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                    番组
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/music/">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                    歌单
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/图集/">
+                    <i class="fa fa-photo" aria-hidden="true"></i>
+                    图集
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/comment/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                  留言板
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/links/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                  友人帐
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/donate/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                  赞赏
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                  关于
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/about/">
+                    <i class="fa fa-meetup" aria-hidden="true"></i>
+                    我？
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/theme-sakura/">
+                    <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                    主题
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/lab/">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    Lab
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/client/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                  客户端
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-apple faa-bounce" aria-hidden="true"></i>
+                  黑苹果
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/支持">
+                    <i class="fa fa-cogs  faa-pulse" aria-hidden="true"></i>
+                    支持
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/镜像">
+                    <i class="fa fa-arrow-circle-o-down faa-bounce" aria-hidden="true"></i>
+                    镜像
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/工具">
+                    <i class="fa fa-wrench faa-shake" aria-hidden="true"></i>
+                    工具
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/完善">
+                    <i class="fa fa-check-circle faa-shake" aria-hidden="true"></i>
+                    完善
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/atom.xml">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                  RSS
+                </span>
+              </a>
+              
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1"
+        class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <header class="entry-header">
+          <h1 class="entry-title">Hello World</h1>
+          <p class="entry-census">&nbsp;·&nbsp;2020-10-6&nbsp;·&nbsp;<span
+              id="busuanzi_value_page_pv"></span>次阅读</p>
+          </p>
+
+          <hr>
+        </header>
+        
+        <div class="entry-content">
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/donate/WechatQR.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
+        </div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+              target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+              知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+          
+            <div class="post-nepre full next">
+              
+              <a href="/2020/04/11/downloadtest/" rel="next">
+                <div class="background">
+                  <img class="lazyload" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/loader/orange.progress-bar-stripe-loader.svg" data-src=""
+                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                    onerror="imgError(this,3)" src="">
+                </div>
+                <span class="label">
+                  Next Post</span>
+                <div class="info">
+                  <h3>
+                    downloadtest</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+            
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function () {
+    var valine = new Valine();
+    valine.init({
+      el: '#vcomments',
+      appId: "Aiy3G092H2AXI5Ad0mFMBugP-MdYXbMMI",
+      appKey: "CoDqXAC8Qk2n7Nw1ikqhNmvk",
+      notify: false,
+      verify: true,
+      enableQQ: true,
+      path: window.location.pathname,
+      placeholder: "你是我一生只会遇见一次的惊喜",
+
+      // 设置Bilibili表情包地址
+      emojiCDN: '//cdn.jsdelivr.net/gh/blogimg/emotion/',
+      // 表情title和图片映射
+      emojiMaps: {
+        "bilibili_tv_抓狂": "bilibili/tv_抓狂.png",
+        "bilibili_tv_皱眉": "bilibili/tv_皱眉.png",
+        "bilibili_tv_再见": "bilibili/tv_再见.png",
+        "bilibili_tv_晕": "bilibili/tv_晕.png",
+        "bilibili_tv_疑问": "bilibili/tv_疑问.png",
+        "bilibili_tv_斜眼笑": "bilibili/tv_斜眼笑.png",
+        "bilibili_tv_笑哭": "bilibili/tv_笑哭.png",
+        "bilibili_tv_无奈": "bilibili/tv_无奈.png",
+        "bilibili_tv_委屈": "bilibili/tv_委屈.png",
+        "bilibili_tv_微笑": "bilibili/tv_微笑.png",
+        "bilibili_tv_吐血": "bilibili/tv_吐血.png",
+        "bilibili_tv_偷笑": "bilibili/tv_偷笑.png",
+        "bilibili_tv_调皮": "bilibili/tv_调皮.png",
+        "bilibili_tv_调侃": "bilibili/tv_调侃.png",
+        "bilibili_tv_思考": "bilibili/tv_思考.png",
+        "bilibili_tv_睡着": "bilibili/tv_睡着.png",
+        "bilibili_tv_生气": "bilibili/tv_生气.png",
+        "bilibili_tv_生病": "bilibili/tv_生病.png",
+        "bilibili_tv_色": "bilibili/tv_色.png",
+        "bilibili_tv_亲亲": "bilibili/tv_亲亲.png",
+        "bilibili_tv_呕吐": "bilibili/tv_呕吐.png",
+        "bilibili_tv_难过": "bilibili/tv_难过.png",
+        "bilibili_tv_目瞪口呆": "bilibili/tv_目瞪口呆.png",
+        "bilibili_tv_腼腆": "bilibili/tv_腼腆.png",
+        "bilibili_tv_流泪": "bilibili/tv_流泪.png",
+        "bilibili_tv_流汗": "bilibili/tv_流汗.png",
+        "bilibili_tv_流鼻血": "bilibili/tv_流鼻血.png",
+        "bilibili_tv_冷漠": "bilibili/tv_冷漠.png",
+        "bilibili_tv_困": "bilibili/tv_困.png",
+        "bilibili_tv_抠鼻": "bilibili/tv_抠鼻.png",
+        "bilibili_tv_可爱": "bilibili/tv_可爱.png",
+        "bilibili_tv_惊吓": "bilibili/tv_惊吓.png",
+        "bilibili_tv_坏笑": "bilibili/tv_坏笑.png",
+        "bilibili_tv_黑人问号": "bilibili/tv_黑人问号.png",
+        "bilibili_tv_害羞": "bilibili/tv_害羞.png",
+        "bilibili_tv_鬼脸": "bilibili/tv_鬼脸.png",
+        "bilibili_tv_鼓掌": "bilibili/tv_鼓掌.png",
+        "bilibili_tv_尴尬": "bilibili/tv_尴尬.png",
+        "bilibili_tv_发怒": "bilibili/tv_发怒.png",
+        "bilibili_tv_发财": "bilibili/tv_发财.png",
+        "bilibili_tv_点赞": "bilibili/tv_点赞.png",
+        "bilibili_tv_呆": "bilibili/tv_呆.png",
+        "bilibili_tv_大佬": "bilibili/tv_大佬.png",
+        "bilibili_tv_大哭": "bilibili/tv_大哭.png",
+        "bilibili_tv_打脸": "bilibili/tv_打脸.png",
+        "bilibili_tv_馋": "bilibili/tv_馋.png",
+        "bilibili_tv_闭嘴": "bilibili/tv_闭嘴.png",
+        "bilibili_tv_鄙视": "bilibili/tv_鄙视.png",
+        "bilibili_tv_白眼": "bilibili/tv_白眼.png",
+        "bilibili_tv_doge": "bilibili/tv_doge.png",
+        "猥琐萌_327.": "猥琐萌/327.jpg",
+        "猥琐萌_326.": "猥琐萌/326.gif",
+        "猥琐萌_325.": "猥琐萌/325.jpg",
+        "猥琐萌_324.": "猥琐萌/324.jpg",
+        "猥琐萌_323.": "猥琐萌/323.jpg",
+        "猥琐萌_322.": "猥琐萌/322.jpg",
+        "猥琐萌_321.": "猥琐萌/321.jpg",
+        "猥琐萌_320.": "猥琐萌/320.jpg",
+        "猥琐萌_319.": "猥琐萌/319.jpg",
+        "猥琐萌_318.": "猥琐萌/318.jpg",
+        "猥琐萌_317.": "猥琐萌/317.jpg",
+        "猥琐萌_316.": "猥琐萌/316.jpg",
+        "猥琐萌_315.": "猥琐萌/315.jpg",
+        "猥琐萌_314.": "猥琐萌/314.jpg",
+        "猥琐萌_313.": "猥琐萌/313.jpg",
+        "猥琐萌_312.": "猥琐萌/312.gif",
+        "猥琐萌_311.": "猥琐萌/311.jpg",
+        "猥琐萌_310.": "猥琐萌/310.gif",
+        "猥琐萌_309.": "猥琐萌/309.jpg",
+        "猥琐萌_308.": "猥琐萌/308.jpg",
+        "猥琐萌_307.": "猥琐萌/307.jpg",
+        "猥琐萌_306.": "猥琐萌/306.jpg",
+        "猥琐萌_305.": "猥琐萌/305.jpg",
+        "猥琐萌_304.": "猥琐萌/304.jpg",
+        "猥琐萌_303.": "猥琐萌/303.jpg",
+        "猥琐萌_302.": "猥琐萌/302.jpg",
+        "猥琐萌_301.": "猥琐萌/301.jpg",
+        "猥琐萌_300.": "猥琐萌/300.jpg",
+        "猥琐萌_299.": "猥琐萌/299.jpg",
+        "猥琐萌_298.": "猥琐萌/298.gif",
+        "猥琐萌_297.": "猥琐萌/297.jpg",
+        "猥琐萌_296.": "猥琐萌/296.gif",
+        "猥琐萌_295.": "猥琐萌/295.jpg",
+        "猥琐萌_294.": "猥琐萌/294.jpg",
+        "猥琐萌_293.": "猥琐萌/293.jpg",
+        "猥琐萌_292.": "猥琐萌/292.jpg",
+        "猥琐萌_291.": "猥琐萌/291.jpg",
+        "猥琐萌_290.": "猥琐萌/290.jpg",
+        "猥琐萌_289.": "猥琐萌/289.jpg",
+        "猥琐萌_288.": "猥琐萌/288.jpg",
+        "猥琐萌_287.": "猥琐萌/287.gif",
+        "猥琐萌_286.": "猥琐萌/286.jpg",
+        "猥琐萌_285.": "猥琐萌/285.jpg",
+        "猥琐萌_284.": "猥琐萌/284.jpg",
+        "猥琐萌_283.": "猥琐萌/283.jpg",
+        "猥琐萌_282.": "猥琐萌/282.jpg",
+        "猥琐萌_281.": "猥琐萌/281.jpg",
+        "猥琐萌_280.": "猥琐萌/280.jpg",
+        "猥琐萌_279.": "猥琐萌/279.jpg",
+        "猥琐萌_278.": "猥琐萌/278.jpg",
+        "猥琐萌_277.": "猥琐萌/277.jpg",
+        "猥琐萌_276.": "猥琐萌/276.jpg",
+        "猥琐萌_275.": "猥琐萌/275.jpg",
+        "猥琐萌_274.": "猥琐萌/274.jpg",
+        "猥琐萌_273.": "猥琐萌/273.jpg",
+        "猥琐萌_272.": "猥琐萌/272.jpg",
+        "猥琐萌_271.": "猥琐萌/271.jpg",
+        "猥琐萌_270.": "猥琐萌/270.jpg",
+        "猥琐萌_269.": "猥琐萌/269.jpg",
+        "猥琐萌_268.": "猥琐萌/268.jpg",
+        "猥琐萌_267.": "猥琐萌/267.jpg",
+        "猥琐萌_266.": "猥琐萌/266.jpg",
+        "猥琐萌_265.": "猥琐萌/265.jpg",
+        "猥琐萌_264.": "猥琐萌/264.jpg",
+        "猥琐萌_263.": "猥琐萌/263.jpg",
+        "猥琐萌_262.": "猥琐萌/262.jpg",
+        "猥琐萌_261.": "猥琐萌/261.jpg",
+        "猥琐萌_260.": "猥琐萌/260.jpg",
+        "猥琐萌_259.": "猥琐萌/259.jpg",
+        "猥琐萌_258.": "猥琐萌/258.jpg",
+        "猥琐萌_257.": "猥琐萌/257.jpg",
+        "猥琐萌_256.": "猥琐萌/256.jpg",
+        "猥琐萌_255.": "猥琐萌/255.jpg",
+        "猥琐萌_254.": "猥琐萌/254.jpg",
+        "猥琐萌_253.": "猥琐萌/253.jpg",
+        "猥琐萌_252.": "猥琐萌/252.jpg",
+        "猥琐萌_251.": "猥琐萌/251.jpg",
+        "猥琐萌_250.": "猥琐萌/250.jpg",
+        "猥琐萌_249.": "猥琐萌/249.jpg",
+        "猥琐萌_248.": "猥琐萌/248.jpg",
+        "猥琐萌_247.": "猥琐萌/247.jpeg",
+        "猥琐萌_246.": "猥琐萌/246.jpg",
+        "猥琐萌_245.": "猥琐萌/245.jpg",
+        "猥琐萌_244.": "猥琐萌/244.jpg",
+        "猥琐萌_243.": "猥琐萌/243.jpg",
+        "猥琐萌_242.": "猥琐萌/242.jpg",
+        "猥琐萌_241.": "猥琐萌/241.jpg",
+        "猥琐萌_240.": "猥琐萌/240.jpg",
+        "猥琐萌_239.": "猥琐萌/239.jpg",
+        "猥琐萌_238.": "猥琐萌/238.jpg",
+        "猥琐萌_237.": "猥琐萌/237.jpg",
+        "猥琐萌_236.": "猥琐萌/236.jpg",
+        "猥琐萌_235.": "猥琐萌/235.jpg",
+        "猥琐萌_234.": "猥琐萌/234.jpg",
+        "猥琐萌_233.": "猥琐萌/233.jpg",
+        "猥琐萌_232.": "猥琐萌/232.jpg",
+        "猥琐萌_231.": "猥琐萌/231.jpg",
+        "猥琐萌_230.": "猥琐萌/230.jpg",
+        "猥琐萌_229.": "猥琐萌/229.jpg",
+        "猥琐萌_228.": "猥琐萌/228.jpg",
+        "猥琐萌_227.": "猥琐萌/227.jpg",
+        "猥琐萌_226.": "猥琐萌/226.jpg",
+        "猥琐萌_225.": "猥琐萌/225.jpg",
+        "猥琐萌_224.": "猥琐萌/224.jpg",
+        "猥琐萌_223.": "猥琐萌/223.jpg",
+        "猥琐萌_222.": "猥琐萌/222.jpg",
+        "猥琐萌_221.": "猥琐萌/221.jpg",
+        "猥琐萌_220.": "猥琐萌/220.jpg",
+        "猥琐萌_219.": "猥琐萌/219.jpg",
+        "猥琐萌_218.": "猥琐萌/218.jpg",
+        "猥琐萌_217.": "猥琐萌/217.jpg",
+        "猥琐萌_216.": "猥琐萌/216.jpg",
+        "猥琐萌_215.": "猥琐萌/215.jpg",
+        "猥琐萌_214.": "猥琐萌/214.jpg",
+        "猥琐萌_213.": "猥琐萌/213.jpg",
+        "猥琐萌_212.": "猥琐萌/212.jpg",
+        "猥琐萌_211.": "猥琐萌/211.jpg",
+        "猥琐萌_210.": "猥琐萌/210.jpg",
+        "猥琐萌_209.": "猥琐萌/209.jpg",
+        "猥琐萌_208.": "猥琐萌/208.jpg",
+        "猥琐萌_207.": "猥琐萌/207.jpg",
+        "猥琐萌_206.": "猥琐萌/206.jpg",
+        "猥琐萌_205.": "猥琐萌/205.jpg",
+        "猥琐萌_204.": "猥琐萌/204.jpg",
+        "猥琐萌_203.": "猥琐萌/203.jpg",
+        "猥琐萌_202.": "猥琐萌/202.jpg",
+        "猥琐萌_201.": "猥琐萌/201.jpg",
+        "猥琐萌_200.": "猥琐萌/200.jpg",
+        "猥琐萌_199.": "猥琐萌/199.jpg",
+        "猥琐萌_198.": "猥琐萌/198.jpg",
+        "猥琐萌_197.": "猥琐萌/197.jpg",
+        "猥琐萌_196.": "猥琐萌/196.jpg",
+        "猥琐萌_195.": "猥琐萌/195.jpg",
+        "猥琐萌_194.": "猥琐萌/194.jpg",
+        "猥琐萌_193.": "猥琐萌/193.jpg",
+        "猥琐萌_192.": "猥琐萌/192.jpg",
+        "猥琐萌_191.": "猥琐萌/191.jpg",
+        "猥琐萌_190.": "猥琐萌/190.jpg",
+        "猥琐萌_189.": "猥琐萌/189.jpg",
+        "猥琐萌_188.": "猥琐萌/188.jpg",
+        "猥琐萌_187.": "猥琐萌/187.jpg",
+        "猥琐萌_186.": "猥琐萌/186.jpg",
+        "猥琐萌_185.": "猥琐萌/185.jpg",
+        "猥琐萌_184.": "猥琐萌/184.jpg",
+        "猥琐萌_183.": "猥琐萌/183.jpg",
+        "猥琐萌_182.": "猥琐萌/182.jpg",
+        "猥琐萌_181.": "猥琐萌/181.jpg",
+        "猥琐萌_180.": "猥琐萌/180.jpg",
+        "猥琐萌_179.": "猥琐萌/179.jpg",
+        "猥琐萌_178.": "猥琐萌/178.jpg",
+        "猥琐萌_177.": "猥琐萌/177.jpg",
+        "猥琐萌_176.": "猥琐萌/176.jpg",
+        "猥琐萌_175.": "猥琐萌/175.jpg",
+        "猥琐萌_174.": "猥琐萌/174.jpg",
+        "猥琐萌_173.": "猥琐萌/173.jpg",
+        "猥琐萌_172.": "猥琐萌/172.jpg",
+        "猥琐萌_171.": "猥琐萌/171.jpg",
+        "猥琐萌_170.": "猥琐萌/170.jpg",
+        "猥琐萌_169.": "猥琐萌/169.jpg",
+        "猥琐萌_168.": "猥琐萌/168.jpg",
+        "猥琐萌_167.": "猥琐萌/167.jpg",
+        "猥琐萌_166.": "猥琐萌/166.jpg",
+        "猥琐萌_165.": "猥琐萌/165.jpg",
+        "猥琐萌_164.": "猥琐萌/164.jpg",
+        "猥琐萌_163.": "猥琐萌/163.jpg",
+        "猥琐萌_162.": "猥琐萌/162.jpg",
+        "猥琐萌_161.": "猥琐萌/161.jpg",
+        "猥琐萌_160.": "猥琐萌/160.jpg",
+        "猥琐萌_159.": "猥琐萌/159.jpg",
+        "猥琐萌_158.": "猥琐萌/158.jpg",
+        "猥琐萌_157.": "猥琐萌/157.jpg",
+        "猥琐萌_156.": "猥琐萌/156.jpg",
+        "猥琐萌_155.": "猥琐萌/155.jpg",
+        "猥琐萌_154.": "猥琐萌/154.jpg",
+        "猥琐萌_153.": "猥琐萌/153.jpg",
+        "猥琐萌_152.": "猥琐萌/152.jpg",
+        "猥琐萌_151.": "猥琐萌/151.jpg",
+        "猥琐萌_150.": "猥琐萌/150.jpg",
+        "猥琐萌_149.": "猥琐萌/149.jpg",
+        "猥琐萌_148.": "猥琐萌/148.jpg",
+        "猥琐萌_147.": "猥琐萌/147.jpg",
+        "猥琐萌_146.": "猥琐萌/146.jpg",
+        "猥琐萌_145.": "猥琐萌/145.jpg",
+        "猥琐萌_144.": "猥琐萌/144.jpg",
+        "猥琐萌_143.": "猥琐萌/143.jpg",
+        "猥琐萌_142.": "猥琐萌/142.jpg",
+        "猥琐萌_141.": "猥琐萌/141.jpg",
+        "猥琐萌_140.": "猥琐萌/140.jpg",
+        "猥琐萌_139.": "猥琐萌/139.jpg",
+        "猥琐萌_138.": "猥琐萌/138.jpg",
+        "猥琐萌_137.": "猥琐萌/137.jpg",
+        "猥琐萌_136.": "猥琐萌/136.jpg",
+        "猥琐萌_135.": "猥琐萌/135.jpg",
+        "猥琐萌_134.": "猥琐萌/134.jpg",
+        "猥琐萌_133.": "猥琐萌/133.jpg",
+        "猥琐萌_132.": "猥琐萌/132.jpg",
+        "猥琐萌_131.": "猥琐萌/131.jpg",
+        "猥琐萌_130.": "猥琐萌/130.jpg",
+        "猥琐萌_129.": "猥琐萌/129.jpg",
+        "猥琐萌_128.": "猥琐萌/128.jpg",
+        "猥琐萌_127.": "猥琐萌/127.jpg",
+        "猥琐萌_126.": "猥琐萌/126.jpg",
+        "猥琐萌_125.": "猥琐萌/125.jpg",
+        "猥琐萌_124.": "猥琐萌/124.jpg",
+        "猥琐萌_123.": "猥琐萌/123.jpg",
+        "猥琐萌_122.": "猥琐萌/122.jpg",
+        "猥琐萌_121.": "猥琐萌/121.jpg",
+        "猥琐萌_120.": "猥琐萌/120.jpg",
+        "猥琐萌_119.": "猥琐萌/119.jpg",
+        "猥琐萌_118.": "猥琐萌/118.jpg",
+        "猥琐萌_117.": "猥琐萌/117.jpg",
+        "猥琐萌_116.": "猥琐萌/116.jpg",
+        "猥琐萌_115.": "猥琐萌/115.jpg",
+        "猥琐萌_114.": "猥琐萌/114.jpg",
+        "猥琐萌_113.": "猥琐萌/113.jpg",
+        "猥琐萌_112.": "猥琐萌/112.jpg",
+        "猥琐萌_111.": "猥琐萌/111.jpg",
+        "猥琐萌_110.": "猥琐萌/110.jpg",
+        "猥琐萌_109.": "猥琐萌/109.jpg",
+        "猥琐萌_108.": "猥琐萌/108.jpg",
+        "猥琐萌_107.": "猥琐萌/107.jpg",
+        "猥琐萌_106.": "猥琐萌/106.jpg",
+        "猥琐萌_105.": "猥琐萌/105.jpg",
+        "猥琐萌_104.": "猥琐萌/104.jpg",
+        "猥琐萌_103.": "猥琐萌/103.jpg",
+        "猥琐萌_102.": "猥琐萌/102.jpg",
+        "猥琐萌_101.": "猥琐萌/101.jpg",
+        "猥琐萌_100.": "猥琐萌/100.jpg",
+        "猥琐萌_99.": "猥琐萌/99.jpg",
+        "猥琐萌_98.": "猥琐萌/98.jpg",
+        "猥琐萌_97.": "猥琐萌/97.jpg",
+        "猥琐萌_96.": "猥琐萌/96.jpg",
+        "猥琐萌_95.": "猥琐萌/95.jpg",
+        "猥琐萌_94.": "猥琐萌/94.jpg",
+        "猥琐萌_93.": "猥琐萌/93.jpg",
+        "猥琐萌_92.": "猥琐萌/92.jpg",
+        "猥琐萌_91.": "猥琐萌/91.jpg",
+        "猥琐萌_90.": "猥琐萌/90.jpg",
+        "猥琐萌_89.": "猥琐萌/89.jpg",
+        "猥琐萌_88.": "猥琐萌/88.jpg",
+        "猥琐萌_87.": "猥琐萌/87.jpg",
+        "猥琐萌_86.": "猥琐萌/86.jpg",
+        "猥琐萌_85.": "猥琐萌/85.jpg",
+        "猥琐萌_84.": "猥琐萌/84.jpg",
+        "猥琐萌_83.": "猥琐萌/83.jpg",
+        "猥琐萌_82.": "猥琐萌/82.jpg",
+        "猥琐萌_81.": "猥琐萌/81.jpg",
+        "猥琐萌_80.": "猥琐萌/80.jpg",
+        "猥琐萌_79.": "猥琐萌/79.jpg",
+        "猥琐萌_78.": "猥琐萌/78.jpg",
+        "猥琐萌_77.": "猥琐萌/77.jpg",
+        "猥琐萌_76.": "猥琐萌/76.jpg",
+        "猥琐萌_75.": "猥琐萌/75.jpg",
+        "猥琐萌_74.": "猥琐萌/74.jpg",
+        "猥琐萌_73.": "猥琐萌/73.jpg",
+        "猥琐萌_72.": "猥琐萌/72.jpg",
+        "猥琐萌_71.": "猥琐萌/71.jpg",
+        "猥琐萌_70.": "猥琐萌/70.jpg",
+        "猥琐萌_69.": "猥琐萌/69.jpg",
+        "猥琐萌_68.": "猥琐萌/68.jpg",
+        "猥琐萌_67.": "猥琐萌/67.jpg",
+        "猥琐萌_66.": "猥琐萌/66.jpg",
+        "猥琐萌_65.": "猥琐萌/65.jpg",
+        "猥琐萌_64.": "猥琐萌/64.jpg",
+        "猥琐萌_63.": "猥琐萌/63.jpg",
+        "猥琐萌_62.": "猥琐萌/62.jpg",
+        "猥琐萌_61.": "猥琐萌/61.jpg",
+        "猥琐萌_60.": "猥琐萌/60.jpg",
+        "猥琐萌_59.": "猥琐萌/59.jpg",
+        "猥琐萌_58.": "猥琐萌/58.jpg",
+        "猥琐萌_57.": "猥琐萌/57.jpg",
+        "猥琐萌_56.": "猥琐萌/56.jpg",
+        "猥琐萌_55.": "猥琐萌/55.jpg",
+        "猥琐萌_54.": "猥琐萌/54.jpg",
+        "猥琐萌_53.": "猥琐萌/53.jpg",
+        "猥琐萌_52.": "猥琐萌/52.jpg",
+        "猥琐萌_51.": "猥琐萌/51.jpg",
+        "猥琐萌_50.": "猥琐萌/50.jpg",
+        "猥琐萌_49.": "猥琐萌/49.jpg",
+        "猥琐萌_48.": "猥琐萌/48.jpg",
+        "猥琐萌_47.": "猥琐萌/47.jpg",
+        "猥琐萌_46.": "猥琐萌/46.jpg",
+        "猥琐萌_45.": "猥琐萌/45.jpg",
+        "猥琐萌_44.": "猥琐萌/44.jpg",
+        "猥琐萌_43.": "猥琐萌/43.jpg",
+        "猥琐萌_42.": "猥琐萌/42.jpg",
+        "猥琐萌_41.": "猥琐萌/41.jpg",
+        "猥琐萌_40.": "猥琐萌/40.jpg",
+        "猥琐萌_39.": "猥琐萌/39.jpg",
+        "猥琐萌_38.": "猥琐萌/38.jpg",
+        "猥琐萌_37.": "猥琐萌/37.jpg",
+        "猥琐萌_36.": "猥琐萌/36.jpg",
+        "猥琐萌_35.": "猥琐萌/35.jpg",
+        "猥琐萌_34.": "猥琐萌/34.jpg",
+        "猥琐萌_33.": "猥琐萌/33.jpg",
+        "猥琐萌_32.": "猥琐萌/32.jpg",
+        "猥琐萌_31.": "猥琐萌/31.jpg",
+        "猥琐萌_30.": "猥琐萌/30.jpg",
+        "猥琐萌_29.": "猥琐萌/29.jpg",
+        "猥琐萌_28.": "猥琐萌/28.jpg",
+        "猥琐萌_27.": "猥琐萌/27.jpg",
+        "猥琐萌_26.": "猥琐萌/26.jpg",
+        "猥琐萌_25.": "猥琐萌/25.jpg",
+        "猥琐萌_24.": "猥琐萌/24.jpg",
+        "猥琐萌_23.": "猥琐萌/23.jpg",
+        "猥琐萌_22.": "猥琐萌/22.jpg",
+        "猥琐萌_21.": "猥琐萌/21.jpg",
+        "猥琐萌_20.": "猥琐萌/20.jpg",
+        "猥琐萌_19.": "猥琐萌/19.jpg",
+        "猥琐萌_18.": "猥琐萌/18.jpg",
+        "猥琐萌_17.": "猥琐萌/17.jpg",
+        "猥琐萌_16.": "猥琐萌/16.jpg",
+        "猥琐萌_15.": "猥琐萌/15.jpg",
+        "猥琐萌_14.": "猥琐萌/14.jpg",
+        "猥琐萌_13.": "猥琐萌/13.jpg",
+        "猥琐萌_12.": "猥琐萌/12.jpg",
+        "猥琐萌_11.": "猥琐萌/11.jpg",
+        "猥琐萌_10.": "猥琐萌/10.jpg",
+        "猥琐萌_9.": "猥琐萌/9.jpg",
+        "猥琐萌_8.": "猥琐萌/8.jpg",
+        "猥琐萌_7.": "猥琐萌/7.jpg",
+        "猥琐萌_6.": "猥琐萌/6.jpg",
+        "猥琐萌_5.": "猥琐萌/5.jpg",
+        "猥琐萌_4.": "猥琐萌/4.jpg",
+        "猥琐萌_3.": "猥琐萌/3.jpg",
+        "猥琐萌_2.": "猥琐萌/2.jpg",
+        "猥琐萌_1.": "猥琐萌/1.jpg",
+        "bilibili_蛆音娘_疑问": "bilibili/蛆音娘_疑问.png",
+        "bilibili_蛆音娘_摇头": "bilibili/蛆音娘_摇头.png",
+        "bilibili_蛆音娘_无语": "bilibili/蛆音娘_无语.png",
+        "bilibili_蛆音娘_吐血": "bilibili/蛆音娘_吐血.png",
+        "bilibili_蛆音娘_偷看": "bilibili/蛆音娘_偷看.png",
+        "bilibili_蛆音娘_睡觉觉": "bilibili/蛆音娘_睡觉觉.png",
+        "bilibili_蛆音娘_生气": "bilibili/蛆音娘_生气.png",
+        "bilibili_蛆音娘_卖萌": "bilibili/蛆音娘_卖萌.png",
+        "bilibili_蛆音娘_哭泣": "bilibili/蛆音娘_哭泣.png",
+        "bilibili_蛆音娘_机智": "bilibili/蛆音娘_机智.png",
+        "bilibili_蛆音娘_滑稽": "bilibili/蛆音娘_滑稽.png",
+        "bilibili_蛆音娘_哼": "bilibili/蛆音娘_哼.png",
+        "bilibili_蛆音娘_害怕": "bilibili/蛆音娘_害怕.png",
+        "bilibili_蛆音娘_扶额": "bilibili/蛆音娘_扶额.png",
+        "bilibili_蛆音娘_肥皂": "bilibili/蛆音娘_肥皂.png",
+        "bilibili_蛆音娘_大笑": "bilibili/蛆音娘_大笑.png",
+        "bilibili_蛆音娘_吃惊": "bilibili/蛆音娘_吃惊.png",
+        "bilibili_蛆音娘_吃瓜群众": "bilibili/蛆音娘_吃瓜群众.png",
+        "bilibili_蛆音娘_OK": "bilibili/蛆音娘_OK.png",
+        "bilibili_蛆音娘_die": "bilibili/蛆音娘_die.png",
+
+        // ... 更多表情
+      }
+    })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image"
+              alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+              <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                // PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+            },
+            ROOT_URL: '/',
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 kaze<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2020</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
+            class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
+            href="https://2heng.xin/" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a
+            href="https://www.hojun.cn/" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/js/InsightSearch.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/js/jquery.fancybox.min.js"></script>
+<!-- <script type="text/javascript" src="/js/zoom.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/js/sakura-app.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.0/js/Valine.min.js"></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<!-- <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = {
+      "pjax": "1",
+      "movies": {
+        "url": "https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8",
+        "name": "Apple.mp4",
+        "live": "close"
+      },
+      "windowheight": "fixed",
+      "codelamp": "close",
+      "ajaxurl": "",
+      "order": "asc",
+      "formpostion": "bottom"
+    };
+  } else {
+    var Poi = {
+      "pjax": "1",
+      "movies": {
+        "url": "https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8",
+        "name": "Apple.mp4",
+        "live": "open"
+      },
+      "windowheight": "auto",
+      "codelamp": "close",
+      "ajaxurl": "",
+      "order": "asc",
+      "formpostion": "bottom"
+    };
+  }
+  /* ]]> */
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+<!-- fancybox大图查看 需jq -->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script>
+  $('[data-fancybox="images"]').fancybox({ //可选
+    thumbs: {
+      autoStart: true //缩略图
+    }
+  });
+  $('[data-fancybox]').fancybox({ //启用函数，必须
+    //protect: true //图片右键不能下载，可选
+  });
+</script>
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@1.8/images/custom/avatar.jpg">
+  </div>
+  <p
+    style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">
+    樱花庄的风</p>
+  <p style="text-align: center;">
+    
+    
+    <a href="http://github.com/kaze0617" class="fa fa-github" target="_blank"
+      style="color: #333; margin-left:20px"></a>
+    
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=1515097306&site=qq&menu=yes" class="fa fa-qq" target="_blank"
+      style="color: #25c6fe; margin-left:20px"></a>
+    
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+    <li>
+      <a href="/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+          首页
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/archives">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+          归档
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/技术/">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            技术
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/随笔/">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            随笔
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/转载/">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            转载
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+          清单
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/tags/悦读/">
+            <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+            书单
+          </a>
+        </li>
+        
+        <li>
+          <a href="/bangumi/">
+            <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+            番组
+          </a>
+        </li>
+        
+        <li>
+          <a href="/music/">
+            <i class="fa fa-headphones" aria-hidden="true"></i>
+            歌单
+          </a>
+        </li>
+        
+        <li>
+          <a href="/tags/图集/">
+            <i class="fa fa-photo" aria-hidden="true"></i>
+            图集
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/comment/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+          留言板
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/links/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+          友人帐
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/donate/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+          赞赏
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+          关于
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/about/">
+            <i class="fa fa-meetup" aria-hidden="true"></i>
+            我？
+          </a>
+        </li>
+        
+        <li>
+          <a href="/theme-sakura/">
+            <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+            主题
+          </a>
+        </li>
+        
+        <li>
+          <a href="/lab/">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            Lab
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/client/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+          客户端
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-apple faa-bounce" aria-hidden="true"></i>
+          黑苹果
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/支持">
+            <i class="fa fa-cogs  faa-pulse" aria-hidden="true"></i>
+            支持
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/镜像">
+            <i class="fa fa-arrow-circle-o-down faa-bounce" aria-hidden="true"></i>
+            镜像
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/工具">
+            <i class="fa fa-wrench faa-shake" aria-hidden="true"></i>
+            工具
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/完善">
+            <i class="fa fa-check-circle faa-shake" aria-hidden="true"></i>
+            完善
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/atom.xml">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+          RSS
+        </span>
+      </a>
+      
+    </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i
+    class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+
+  .aplayer .aplayer-lrc p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+
+  .aplayer .aplayer-lrc p.aplayer-lrc-current {
+    color: #FF1493;
+  }
+
+  .aplayer.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+  }
+
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+    display: none !important;
+  }
+
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js  id="573369445"  server="netease"  type="playlist"  fixed="true"  autoplay="false"  loop="all"  order="random"  preload="auto"  volume="0.7"  mutex="true"  </meting-js> <script>
+  $(function(){
+  $('body').on('click', '.aplayer', function(){
+  if($('.aplayer-button').hasClass('aplayer-play')) {
+  $('.aplayer-lrc').removeClass('lrc-show');
+  } else {
+  $('.aplayer-lrc').addClass('lrc-show');
+  }
+  })
+  });
+  </script>
+</body>
+</html>
