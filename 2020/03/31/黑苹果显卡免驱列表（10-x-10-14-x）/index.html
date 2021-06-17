@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">黑苹果显卡免驱列表（10.x~10.14.x） | 樱花庄的風 | かぜ·しろ·ましろ</title>
+  
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" media="all">
+  <!-- <link rel="stylesheet" href="/css/zoom.css" media="all"> -->
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <!-- 自定义logo -->
+  <link rel="stylesheet" type="text/css" href="/css/logo.css">
+  <link rel="stylesheet" type="text/css" href="/fonts/LOGO/logo.css">
+  <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+    /*Initial Variables*/
+    var mashiro_option = new Object();
+    var mashiro_global = new Object();
+    mashiro_option.NProgressON = true;
+    /* 
+     * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+     * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+     */
+    mashiro_option.email_domain = "";
+    mashiro_option.email_name = "";
+    mashiro_option.cookie_version_control = "";
+    mashiro_option.qzone_autocomplete = false;
+    mashiro_option.site_name = "樱花庄的風";
+    mashiro_option.author_name = "風";
+    mashiro_option.site_url = "https://kaze0617.gitee.io/";
+    mashiro_option.v_appId = "Aiy3G092H2AXI5Ad0mFMBugP-MdYXbMMI";
+    mashiro_option.v_appKey = "CoDqXAC8Qk2n7Nw1ikqhNmvk";
+    mashiro_option.mathjax = "0";
+    mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
+    mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+    // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+    // mashiro_option.float_player_on = true;
+
+    /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+    var bg = "/images/cover/0.webp,/images/cover/1.webp,/images/cover/2.webp,/images/cover/3.webp,/images/cover/4.webp,/images/cover/5.webp,/images/cover/6.webp,/images/cover/7.webp,/images/cover/8.webp".split(",");
+    var bgindex = Math.floor(Math.random() * bg.length);
+    if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+      alert('朋友，IE浏览器未适配哦~');
+    }
+  </script>
+  <style type="text/css">
+    .hljs-ln {
+      border-collapse: collapse
+    }
+
+    .hljs-ln td {
+      padding: 0
+    }
+
+    .hljs-ln-n:before {
+      content: attr(data-line-number)
+    }
+  </style>
+  <style type="text/css">
+    .site-top .lower nav {
+      display: block !important;
+    }
+
+    .author-profile i,
+    .post-like a,
+    .post-share .show-share,
+    .sub-text,
+    .we-info a,
+    span.sitename,
+    .post-more i:hover,
+    #pagination a:hover,
+    .post-content a:hover,
+    .float-content i:hover {
+      color: #FE9600
+    }
+
+    .feature i,
+    .download,
+    .navigator i:hover,
+    .links ul li:before,
+    .ar-time i,
+    span.ar-circle,
+    .object,
+    .comment .comment-reply-link,
+    .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
+      background: #FE9600
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #FE9600
+    }
+
+    .download,
+    .navigator i:hover,
+    .link-title,
+    .links ul li:hover,
+    #pagination a:hover,
+    .comment-respond input[type='submit']:hover {
+      border-color: #FE9600
+    }
+
+    .entry-content a:hover,
+    .site-info a:hover,
+    .comment h4 a,
+    #comments-navi a.prev,
+    #comments-navi a.next,
+    .comment h4 a:hover,
+    .site-top ul li a:hover,
+    .entry-title a:hover,
+    #archives-temp h3,
+    span.page-numbers.current,
+    .sorry li a:hover,
+    .site-title a:hover,
+    i.iconfont.js-toggle-search.iconsearch:hover,
+    .comment-respond input[type='submit']:hover {
+      color: #FE9600
+    }
+
+    .comments .comments-main {
+      display: block !important;
+    }
+
+    .comments .comments-hidden {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript">
+    if (("standalone" in window.navigator) && window.navigator.standalone) {
+      var noddy, remotes = false;
+      document.addEventListener('click', function (event) {
+        noddy = event.target;
+        while (noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if ('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !==
+            -1 || remotes)) {
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      }, false);
+    }
+  </script>
+  <link rel="apple-touch-icon-180x180" href="/apple-touch-icon-180x180.png">
+  <meta name="theme-color" content="white">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head></html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-grid">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, KAZE!">Hi, KAZE!</h1>
+        <!-- <a href="https://kaze0617.gitee.io/">
+          <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg">
+        </a> -->
+      </div>
+      <div class="header-info">
+        <p>No game no life !</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/kaze0617" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1515097306&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/social/qq.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://gitee.com/kaze0617" target="_blank" class="social-github" title="gitee">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/social/gitee.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container">
+    <video style="object-fit: fill" id="bgvideo" class="video" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink logo">
+            <a href="/">
+                <ruby>
+                <span class="sakuraso">さくら荘</span>
+                <span class="no">の</span>
+                <span class="shironeko">風</span>
+                <rp></rp>
+                <rt class="logo">樱花庄的風</rt>
+                <rp></rp>
+                </ruby>
+              </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+            <li>
+              <a href="/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                  首页
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/archives">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                  归档
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/技术/">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    技术
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/随笔/">
+                    <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                    随笔
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/转载/">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    转载
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-book faa-vertical" aria-hidden="true"></i>
+                  学习
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/Java/">
+                    <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                    JAVA
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="//categories/Java/">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    MCFORGE
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                  清单
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/tags/悦读/">
+                    <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                    书单
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/bangumi/">
+                    <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                    番组
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/music/">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                    歌单
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/图集/">
+                    <i class="fa fa-photo" aria-hidden="true"></i>
+                    图集
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/comment/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                  留言板
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/links/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                  友人帐
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/donate/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                  赞赏
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                  关于
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/about/">
+                    <i class="fa fa-meetup" aria-hidden="true"></i>
+                    我？
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/theme-sakura/">
+                    <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                    主题
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/lab/">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    Lab
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/client/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                  客户端
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-apple faa-bounce" aria-hidden="true"></i>
+                  黑苹果
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/支持">
+                    <i class="fa fa-cogs  faa-pulse" aria-hidden="true"></i>
+                    支持
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/镜像">
+                    <i class="fa fa-arrow-circle-o-down faa-bounce" aria-hidden="true"></i>
+                    镜像
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/工具">
+                    <i class="fa fa-wrench faa-shake" aria-hidden="true"></i>
+                    工具
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/完善">
+                    <i class="fa fa-check-circle faa-shake" aria-hidden="true"></i>
+                    完善
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/atom.xml">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                  RSS
+                </span>
+              </a>
+              
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div class="pattern-center single-center">
+  <!-- 有配图默认渲染第一张 -->
+  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/mojave.jpg);"
+    src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/mojave.jpg">
+  </div>
+  <header class="pattern-header single-header">
+    <h1 class="entry-title">
+      黑苹果显卡免驱列表（10.x~10.14.x）</h1>
+    <p class="entry-census">
+      <span>
+        <a href="/about/">
+          <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg">
+        </a>
+      </span>
+      <span>
+        <a href="/about/">KAZE</a>
+      </span>
+      <span class="bull">
+        ·</span>
+      2020-3-31<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+  </header>
+</div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1"
+        class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>转载自<a href="http://hac.fangf.cc/archives/349" target="_blank" rel="noopener">Hac的小窝</a><br><strong>写在前面： </strong>由于nVidia不再发布最新的Web Drivers驱动程序，使得大部分n卡无法在macos 10.14 mojave版本中运行，除去绝对免驱的GTX显卡，我们并不推荐N卡用户更新至10.14系统，例如GTX 1030 1050 1060 1070 1080等GPU，这类显卡至今无法驱动。我们仍推荐黑苹果用户选用AMD GPU，如RX系例，在mojave上能获得良好的驱动支持。 </p>
+<hr>
+<h1 id="免驱AMD-GPU"><a href="#免驱AMD-GPU" class="headerlink" title="免驱AMD GPU"></a>免驱AMD GPU</h1><h3 id="Vega系列：当前-Mojave-10-14-6"><a href="#Vega系列：当前-Mojave-10-14-6" class="headerlink" title="Vega系列：当前 / Mojave 10.14.6"></a>Vega系列：当前 / Mojave 10.14.6</h3><p>因此，意味Vega系列在mojave或更多版本中能正常运行，需要注意的是某些型号的显卡在macOS中风扇可能全速运转，但从10.14.5开始，己经修复了这个错误。<br>注意：避免购买<strong>XFX讯景</strong>和<strong>Sapphire蓝宝石</strong>这两个品牌，原因是VBIOS可能与macOS存在通信问题，可能导致无法使用。</p>
+<h3 id="支持的GPU："><a href="#支持的GPU：" class="headerlink" title="支持的GPU："></a>支持的GPU：</h3><ul>
+<li>Vega 56</li>
+<li>Vega 64</li>
+<li>Vega 64 Liquid</li>
+<li>Rx Vega VII (需要10.14.5以上)</li>
+<li>Vega Frontier Edition</li>
+<li>Radeon Pro WX 9100</li>
+<li>Radeon Pro WX 7100</li>
+</ul>
+<h3 id="所需kexts："><a href="#所需kexts：" class="headerlink" title="所需kexts："></a>所需kexts：</h3><ul>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+<li><a href="https://www.tonymacx86.com/threads/tool-vgtab-control-your-vega-in-macos-without-flashing-the-vbios.268965/" target="_blank" rel="noopener">VGTab fan kext(风扇和功率控制工具)</a></li>
+</ul>
+<h2 id="Radeon-400系列-Polaris-：当前-Mojave-10-14-6"><a href="#Radeon-400系列-Polaris-：当前-Mojave-10-14-6" class="headerlink" title="Radeon 400系列(Polaris)：当前 / Mojave 10.14.6"></a>Radeon 400系列(Polaris)：当前 / Mojave 10.14.6</h2><p>采用Polaris核心的RX系列基本可以免驱，除去RX 550(Lexa核心不支持)<br>注意：避免购买<strong>XFX讯景</strong>和<strong>Sapphire蓝宝石</strong>这两个品牌，原因是VBIOS可能与macOS存在通信问题，可能导致无法使用。</p>
+<h3 id="支持的GPU：-1"><a href="#支持的GPU：-1" class="headerlink" title="支持的GPU："></a>支持的GPU：</h3><ul>
+<li>RX 460 / 560 / 560D</li>
+<li>RX 470 / 470D / 570 / 570D</li>
+<li>RX 480/580</li>
+<li>RX 590（讯景的不支持黑苹果，要刷蓝宝石或迪兰的bios才可驱动/新出的蓝宝石RX590 GME版也不支持！！！）</li>
+<li>WX 2100</li>
+<li>WX 3100</li>
+<li>WX 4100</li>
+<li>WX 5100</li>
+</ul>
+<h3 id="所需kexts：-1"><a href="#所需kexts：-1" class="headerlink" title="所需kexts："></a>所需kexts：</h3><ul>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+</ul>
+<h2 id="Radeon-R9-3XX系列-Fiji-：当前-Mojave-10-14-6"><a href="#Radeon-R9-3XX系列-Fiji-：当前-Mojave-10-14-6" class="headerlink" title="Radeon R9 3XX系列(Fiji)：当前 / Mojave 10.14.6"></a>Radeon R9 3XX系列(Fiji)：当前 / Mojave 10.14.6</h2><p>Fiji核心的R9 3xx在mojave下能驱动，没有太多问题。但仍需要注意显卡本身的设计和布局，并不能保证R5和R7系列成功，有时需要做大量的工作才能使其正常运作。</p>
+<h3 id="支持的GPU：-2"><a href="#支持的GPU：-2" class="headerlink" title="支持的GPU："></a>支持的GPU：</h3><ul>
+<li>R7 240</li>
+<li>R7 250</li>
+<li>R9 260/360</li>
+<li>R7 260x/360x</li>
+<li>R7 265</li>
+<li>R7 270/370</li>
+<li>R9 270X / 370X</li>
+<li>R9 280/380</li>
+<li>R9 280x/380x</li>
+<li>R9 390((FakeID needed)</li>
+<li>R9 Nano</li>
+<li>R9 Fury</li>
+<li>R9 Fury x</li>
+</ul>
+<h3 id="所需kexts：-2"><a href="#所需kexts：-2" class="headerlink" title="所需kexts："></a>所需kexts：</h3><ul>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+</ul>
+<h1 id="不被支持的AMD-GPU"><a href="#不被支持的AMD-GPU" class="headerlink" title="不被支持的AMD GPU"></a>不被支持的AMD GPU</h1><h2 id="Navi-GPUa-RX-5000"><a href="#Navi-GPUa-RX-5000" class="headerlink" title="Navi GPUa(RX 5000)"></a>Navi GPUa(RX 5000)</h2><p>目前报告macos mojave 10.14.6仍不能支持，要看后续更新版本，本文至现在的时间，已证实catalina 10.15可以得到支持。</p>
+<h3 id="不被支持的GPU（当前最高Mojave-10-14-6）："><a href="#不被支持的GPU（当前最高Mojave-10-14-6）：" class="headerlink" title="不被支持的GPU（当前最高Mojave 10.14.6）："></a>不被支持的GPU（当前最高Mojave 10.14.6）：</h3><ul>
+<li>RX 5700</li>
+<li>RX 5700 XT</li>
+<li>RX 5700 XT 50周年纪念版</li>
+</ul>
+<hr>
+<h1 id="免驱nVidia-GPU"><a href="#免驱nVidia-GPU" class="headerlink" title="免驱nVidia GPU"></a>免驱nVidia GPU</h1><h2 id="Kepler-开普勒-GTX-6XX-7XX：当前-Mojave-10-14-6"><a href="#Kepler-开普勒-GTX-6XX-7XX：当前-Mojave-10-14-6" class="headerlink" title="Kepler(开普勒) GTX 6XX 7XX：当前 / Mojave 10.14.6"></a>Kepler(开普勒) GTX 6XX 7XX：当前 / Mojave 10.14.6</h2><p>己报告当前唯一能在Mojave免驱的N卡核心。但仍有部分用户报告了GTX 650 TI,660,660TI的问题，部分GK106 GP106和一些中国特供版，阉割版的GDDR5X显存的低端显卡无法使用，请务必使用GPUZ查看显卡核心。</p>
+<h3 id="支持的显卡："><a href="#支持的显卡：" class="headerlink" title="支持的显卡："></a>支持的显卡：</h3><h4 id="Kepler-开普勒-2代："><a href="#Kepler-开普勒-2代：" class="headerlink" title="Kepler(开普勒)2代："></a>Kepler(开普勒)2代：</h4><ul>
+<li>GTX Titan（GK 110 Maxwell核心）</li>
+<li>GTX Titan Black（GK 110 Maxwell核心）</li>
+<li>GTX Titan Z（MacO支持的少数双GPU卡之一）</li>
+<li>GTX 780 / ti</li>
+<li>GTX 770</li>
+<li>GTX 760 / ti</li>
+<li>GT 740</li>
+<li>GT 730</li>
+<li>GT 720</li>
+<li>GT 710</li>
+</ul>
+<h4 id="Kepler-开普勒-1代："><a href="#Kepler-开普勒-1代：" class="headerlink" title="Kepler(开普勒)1代："></a>Kepler(开普勒)1代：</h4><ul>
+<li>GTX Titan（GK 110 Maxwell核心）</li>
+<li>GTX Titan Black（GK 110 Maxwell核心）</li>
+<li>GTX Titan Z（不幸的是，MacO中很少使用双GPU卡之一，但从未真正使用过）</li>
+<li>GTX 690（另一个与MacOS兼容的双GPU卡）</li>
+<li>GTX 680</li>
+<li>GTX 670</li>
+<li>GTX 660 / TI（必须运行GK 104内核，而不是GK 106）</li>
+<li>GTX 650（必须运行GK 107内核，而不是GK 106）</li>
+<li>GTX 645（GT 645是费米）</li>
+<li>GT 640（开普勒版，GK 107/208核心）</li>
+<li>GT 630（开普勒版，GK 208核心）</li>
+</ul>
+<h4 id="Quadro专业绘图卡："><a href="#Quadro专业绘图卡：" class="headerlink" title="Quadro专业绘图卡："></a>Quadro专业绘图卡：</h4><ul>
+<li>Quadro 410</li>
+<li>Quadro K420</li>
+<li>Quadro K600</li>
+<li>Quadro K2000 / D</li>
+<li>Quadro K4000 / D</li>
+<li>Quadro K4200</li>
+<li>Quadro K5000</li>
+<li>Quadro K5200</li>
+<li>Quadro K6000</li>
+</ul>
+<h3 id="所需kexts：-3"><a href="#所需kexts：-3" class="headerlink" title="所需kexts："></a>所需kexts：</h3><ul>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+</ul>
+<h2 id="Fermi核心-GTX-4XX-5XX：当前（有部分工作）-Mojave-10-14-6"><a href="#Fermi核心-GTX-4XX-5XX：当前（有部分工作）-Mojave-10-14-6" class="headerlink" title="Fermi核心 GTX 4XX 5XX：当前（有部分工作） / Mojave 10.14.6"></a>Fermi核心 GTX 4XX 5XX：当前（有部分工作） / Mojave 10.14.6</h2><p>实际上Mojave己经不再支持这类显卡，但高兴的是，我们可以将10.13的驱动提取出来，放到mojave中，即可使用。但需要注意的是，可能会遇到某些奇怪的驱动问题，因此，如非必需的话，还是建议退回10.13中使用这些显卡。</p>
+<h3 id="所需kexts：-4"><a href="#所需kexts：-4" class="headerlink" title="所需kexts："></a>所需kexts：</h3><ul>
+<li><a href="https://www.dropbox.com/s/32h43kn0jqvcpoh/GeForce-GF100-Series.kext.zip?dl=0" target="_blank" rel="noopener">GeForce-GF100-Series.kext</a>&nbsp;(需要在 System⁩<em>Library⁩</em>⁨Frameworks⁩_CoreDisplay.framework⁩_Versions⁩/A⁩替换版本)</li>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+</ul>
+<h2 id="其它更老更旧的显卡"><a href="#其它更老更旧的显卡" class="headerlink" title="其它更老更旧的显卡"></a>其它更老更旧的显卡</h2><p>如Geforce 5xx 4xx 2xx 8600m(gt)/8800m(gt) 9400m/9600m(gt 320m/330m)<br>我们推荐使用以下工具：<a href="https://github.com/chris1111/Fix-Old-NVIDIA-macOS-Mojave" target="_blank" rel="noopener">https://github.com/chris1111/Fix-Old-NVIDIA-macOS-Mojave</a></p>
+<h2 id="Pascal核心-GTX-10xx：High-Sierra-10-13-6"><a href="#Pascal核心-GTX-10xx：High-Sierra-10-13-6" class="headerlink" title="Pascal核心 GTX 10xx：High Sierra 10.13.6"></a>Pascal核心 GTX 10xx：High Sierra 10.13.6</h2><p>最普遍使用的显卡类型，最高只支持<strong>High Sierra 10.13.6</strong>，需要安装&nbsp;<a href="https://www.nvidia.com/download/driverResults.aspx/125379/en-us" target="_blank" rel="noopener">Nvidia’s Web drivers</a>&nbsp;。仍需要注意的是，某些中国特供版GP106核心和GDDR5X显存的显卡，被称为阉割版或者妖板的将无法被驱动。</p>
+<h4 id="支持的显卡：-1"><a href="#支持的显卡：-1" class="headerlink" title="支持的显卡："></a>支持的显卡：</h4><ul>
+<li>GTX Titan X(GP 102-400 Pascal core)</li>
+<li>GTX Titan Xp(GP 102-450 Pascal core)</li>
+<li>GTX 1080/ti</li>
+<li>GTX 1070/ti</li>
+<li>GTX 1060</li>
+<li>GTX 1050/ti</li>
+<li>GT 1030</li>
+</ul>
+<h4 id="Quadro："><a href="#Quadro：" class="headerlink" title="Quadro："></a>Quadro：</h4><ul>
+<li>Quadro P400</li>
+<li>Quadro P600</li>
+<li>Quadro P620</li>
+<li>Quadro P1000</li>
+<li>Quadro P2000</li>
+<li>Quadro P4000</li>
+<li>Quadro P5000</li>
+<li>Quadro P6000</li>
+<li>Quadro GP100</li>
+</ul>
+<h3 id="所需kexts：-5"><a href="#所需kexts：-5" class="headerlink" title="所需kexts："></a>所需kexts：</h3><ul>
+<li><a href="http://k61.org/Nvidia-web-driver-download-laowu-hackintosh.html" target="_blank" rel="noopener">Nvidia’s Web drivers</a></li>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+</ul>
+<h2 id="Maxwell核心GTX-9xx-745-750-和-ti-variant：High-Sierra-10-13-6"><a href="#Maxwell核心GTX-9xx-745-750-和-ti-variant：High-Sierra-10-13-6" class="headerlink" title="Maxwell核心GTX 9xx, 745, 750 和 ti variant：High Sierra 10.13.6"></a>Maxwell核心GTX 9xx, 745, 750 和 ti variant：High Sierra 10.13.6</h2><p>GTX 745、750和750ti都是基于Maxwell，最高只支持<strong>High Sierra 10.13.6</strong>，需要安装&nbsp;<a href="https://www.nvidia.com/download/driverResults.aspx/125379/en-us" target="_blank" rel="noopener">Nvidia’s Web drivers</a>&nbsp;。</p>
+<h4 id="支持的显卡：-2"><a href="#支持的显卡：-2" class="headerlink" title="支持的显卡："></a>支持的显卡：</h4><ul>
+<li>GTX Titan X(GM 200 Maxwell core)</li>
+<li>GTX 980/ti</li>
+<li>GTX 970</li>
+<li>GTX 960</li>
+<li>GTX 950</li>
+<li>GTX 750/ti</li>
+<li>GTX 745</li>
+</ul>
+<h4 id="Quadro：-1"><a href="#Quadro：-1" class="headerlink" title="Quadro："></a>Quadro：</h4><ul>
+<li>Quadro K620</li>
+<li>Quadro K1200</li>
+<li>Quadro K220</li>
+<li>Quadro M2000</li>
+<li>Quadro M4000</li>
+<li>Quadro M5000</li>
+<li>Quadro M6000</li>
+<li>NVS 510</li>
+</ul>
+<h3 id="所需kexts：-6"><a href="#所需kexts：-6" class="headerlink" title="所需kexts："></a>所需kexts：</h3><ul>
+<li><a href="http://k61.org/Nvidia-web-driver-download-laowu-hackintosh.html" target="_blank" rel="noopener">Nvidia’s Web drivers</a></li>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+</ul>
+<hr>
+<h1 id="不支持的nVidia-GPU"><a href="#不支持的nVidia-GPU" class="headerlink" title="不支持的nVidia GPU"></a>不支持的nVidia GPU</h1><h3 id="Turing核心（GTX-2XXX-16XX）"><a href="#Turing核心（GTX-2XXX-16XX）" class="headerlink" title="Turing核心（GTX 2XXX 16XX）"></a>Turing核心（GTX 2XXX 16XX）</h3><p>截止本文发布前，无法在任何一个系统中驱动该类显卡，不能使用！</p>
+<ul>
+<li>Titan RTX</li>
+<li>RTX 2080 Ti</li>
+<li>RTX 2080 Super</li>
+<li>RTX 2080</li>
+<li>RTX 2070 Super</li>
+<li>RTX 2070</li>
+<li>RTX 2060 Super</li>
+<li>RTX 2060</li>
+<li>GTX 1660 Ti</li>
+<li>GTX 1660</li>
+<li>GTX 1650</li>
+<li>Quadro RTX 8000</li>
+<li>Quadro RTX 6000</li>
+<li>Quadro RTX 5000</li>
+<li>Quadro RTX 4000</li>
+</ul>
+<hr>
+<h1 id="Intel-HD核显"><a href="#Intel-HD核显" class="headerlink" title="Intel HD核显"></a>Intel HD核显</h1><p>Intel的核心显卡，需要进行FrameBuffer补丁才能使其工作，我们建议参考国外的：<a href="https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/?tab=comments#comment-2626271" target="_blank" rel="noopener">https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/?tab=comments#comment-2626271</a><br>教程，并不推荐老式奔腾，赛扬和Atom处理器的核显安装黑苹果，虽然有些能成功，但的确过于折腾。此外，我们也不推荐HD 2000 2500用户安装黑苹果，目前新的系统己经不支持了。</p>
+<ul>
+<li>HD 2000</li>
+<li>HD 3000</li>
+<li>HD 2500</li>
+<li>HD 4000</li>
+<li>HD 4200</li>
+<li>HD 4400</li>
+<li>HD 4600</li>
+<li>HD 5000</li>
+<li>HD 5100</li>
+<li>HD P4600(可能)</li>
+<li>HD P4700(可能)</li>
+<li>HD 5300</li>
+<li>HD 5500</li>
+<li>HD 5600</li>
+<li>HD 6000</li>
+<li>HD 6100</li>
+<li>HD 6200</li>
+<li>HD P5700(可能)</li>
+<li>Iris Pro P6300</li>
+<li>HD 510</li>
+<li>HD 515</li>
+<li>HD 520</li>
+<li>HD 530</li>
+<li>HD P530</li>
+<li>Iris 540</li>
+<li>Iris 550</li>
+<li>Iris Pro 580</li>
+<li>Iris Pro P555</li>
+<li>Iris Pro P580</li>
+<li>HD 615</li>
+<li>HD 620</li>
+<li>HD 630</li>
+<li>Iris Plus 640</li>
+<li>Iris Plus 650</li>
+<li>UHD 610</li>
+<li>UHD 620</li>
+<li>UHD 630</li>
+<li>Iris Plus 655</li>
+</ul>
+<p>需要 kexts:</p>
+<ul>
+<li><a href="https://github.com/acidanthera/Lilu/releases" target="_blank" rel="noopener">Lilu.kext</a></li>
+<li><a href="https://github.com/acidanthera/WhateverGreen/releases" target="_blank" rel="noopener">WhateverGreen.kext</a></li>
+<li><a href="https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/?tab=comments#comment-2626271" target="_blank" rel="noopener">IntelFrameBuffer Patching guide</a></li>
+</ul>
+<hr>
+<h1 id="AMD-核显"><a href="#AMD-核显" class="headerlink" title="AMD 核显"></a>AMD 核显</h1><p>全部不支持！！！</p>
+<hr>
+<h1 id="推荐的显卡"><a href="#推荐的显卡" class="headerlink" title="推荐的显卡"></a>推荐的显卡</h1><p>以下是最为兼容的显卡型号，看到了吗，都是AMD的，即插即用，<strong>但不能购买 XFX讯景的显卡，VBIOS存在问题，不能兼容黑苹果。</strong></p>
+<ul>
+<li>Rx 460/560</li>
+<li>Rx 470/570</li>
+<li>Rx 480/580</li>
+<li>Rx 590</li>
+<li>Rx Vega 56</li>
+<li>Rx Vega 64</li>
+<li>Rx Vega VII</li>
+</ul>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/donate/WechatQR.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
+        </div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+              target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+              知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+        <div class="post-nepre half previous">
+          
+            <a href="/2020/03/31/黑苹果显卡免驱列表（15-x-）/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/catalina.jpg"
+                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
+                  src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/catalina.jpg">
+              </div>
+              <span class="label">
+                Previous Post</span>
+              <div class="info">
+                <h3>
+                  黑苹果显卡免驱列表（15.x~）</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+          
+          
+          
+          <div class="post-nepre half next">
+            
+              <a href="/2020/03/30/关于EFI中驱动的含义/" rel="next">
+                <div class="background">
+                  <img class="lazyload" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/kext.jpg"
+                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                    onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/kext.jpg">
+                </div>
+                <span class="label">
+                  Next Post</span>
+                <div class="info">
+                  <h3>
+                    关于EFI中驱动的含义</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+            
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function () {
+    var valine = new Valine();
+    valine.init({
+      el: '#vcomments',
+      appId: "Aiy3G092H2AXI5Ad0mFMBugP-MdYXbMMI",
+      appKey: "CoDqXAC8Qk2n7Nw1ikqhNmvk",
+      notify: false,
+      verify: true,
+      enableQQ: true,
+      path: window.location.pathname,
+      placeholder: "你是我一生只会遇见一次的惊喜",
+
+      // 设置Bilibili表情包地址
+      emojiCDN: '//i0.hdslb.com/bfs/emote/',
+      // 表情title和图片映射
+      emojiMaps: {
+        "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+        "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+        "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+        "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+        "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+        "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+        "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+        "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+        "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+        "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+        "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+        "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+        "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+        "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+        "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+        "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+        "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+        "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+        "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+        "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+        "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+        "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+        "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+        "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+        "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+        "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+        "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+        "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+        "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+        "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
+        "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+        "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+        "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+        "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
+        "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+        "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+        "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+        "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
+        "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+        "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+        "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
+        "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+        "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+        "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
+        "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+        "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+        "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+        "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+        "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
+        "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
+
+        // ... 更多表情
+      }
+    })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg" itemprop="image"
+              alt="KAZE" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+              <a href="/about/" itemprop="url" rel="author">KAZE</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>爱折腾</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                // PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+            },
+            ROOT_URL: '/',
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 KAZE<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
+            class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
+            href="https://2heng.xin/" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a
+            href="https://www.hojun.cn/" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo,
+          Hosted by Gitee and Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/InsightSearch.js"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/zoom.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/sakura-app.js"></script>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/Valine.min.js"></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = {
+      "pjax": "1",
+      "movies": {
+        "url": "https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3",
+        "name": "Apple.mp4",
+        "live": "close"
+      },
+      "windowheight": "fixed",
+      "codelamp": "close",
+      "ajaxurl": "",
+      "order": "asc",
+      "formpostion": "bottom"
+    };
+  } else {
+    var Poi = {
+      "pjax": "1",
+      "movies": {
+        "url": "https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3",
+        "name": "Apple.mp4",
+        "live": "open"
+      },
+      "windowheight": "auto",
+      "codelamp": "close",
+      "ajaxurl": "",
+      "order": "asc",
+      "formpostion": "bottom"
+    };
+  }
+  /* ]]> */
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg">
+  </div>
+  <p
+    style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">
+    樱花庄的風</p>
+  <p style="text-align: center;">
+    
+    
+    <a href="http://github.com/kaze0617" class="fa fa-github" target="_blank"
+      style="color: #333; margin-left:20px"></a>
+    
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=1515097306&site=qq&menu=yes" class="fa fa-qq" target="_blank"
+      style="color: #25c6fe; margin-left:20px"></a>
+    
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+    <li>
+      <a href="/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+          首页
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/archives">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+          归档
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/技术/">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            技术
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/随笔/">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            随笔
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/转载/">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            转载
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-book faa-vertical" aria-hidden="true"></i>
+          学习
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/Java/">
+            <i class="fa fa-file-code-o" aria-hidden="true"></i>
+            JAVA
+          </a>
+        </li>
+        
+        <li>
+          <a href="//categories/Java/">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            MCFORGE
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+          清单
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/tags/悦读/">
+            <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+            书单
+          </a>
+        </li>
+        
+        <li>
+          <a href="/bangumi/">
+            <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+            番组
+          </a>
+        </li>
+        
+        <li>
+          <a href="/music/">
+            <i class="fa fa-headphones" aria-hidden="true"></i>
+            歌单
+          </a>
+        </li>
+        
+        <li>
+          <a href="/tags/图集/">
+            <i class="fa fa-photo" aria-hidden="true"></i>
+            图集
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/comment/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+          留言板
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/links/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+          友人帐
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/donate/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+          赞赏
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+          关于
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/about/">
+            <i class="fa fa-meetup" aria-hidden="true"></i>
+            我？
+          </a>
+        </li>
+        
+        <li>
+          <a href="/theme-sakura/">
+            <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+            主题
+          </a>
+        </li>
+        
+        <li>
+          <a href="/lab/">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            Lab
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/client/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+          客户端
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-apple faa-bounce" aria-hidden="true"></i>
+          黑苹果
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/支持">
+            <i class="fa fa-cogs  faa-pulse" aria-hidden="true"></i>
+            支持
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/镜像">
+            <i class="fa fa-arrow-circle-o-down faa-bounce" aria-hidden="true"></i>
+            镜像
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/工具">
+            <i class="fa fa-wrench faa-shake" aria-hidden="true"></i>
+            工具
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/完善">
+            <i class="fa fa-check-circle faa-shake" aria-hidden="true"></i>
+            完善
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/atom.xml">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+          RSS
+        </span>
+      </a>
+      
+    </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i
+    class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    switch="true"
+
+    id="7527603935"
+
+    server="tencent"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.2"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  
+</body>
+</html>

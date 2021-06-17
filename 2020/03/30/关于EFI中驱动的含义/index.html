@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">关于EFI中驱动的含义 | 樱花庄的風 | かぜ·しろ·ましろ</title>
+  
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" media="all">
+  <!-- <link rel="stylesheet" href="/css/zoom.css" media="all"> -->
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <!-- 自定义logo -->
+  <link rel="stylesheet" type="text/css" href="/css/logo.css">
+  <link rel="stylesheet" type="text/css" href="/fonts/LOGO/logo.css">
+  <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+    /*Initial Variables*/
+    var mashiro_option = new Object();
+    var mashiro_global = new Object();
+    mashiro_option.NProgressON = true;
+    /* 
+     * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+     * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+     */
+    mashiro_option.email_domain = "";
+    mashiro_option.email_name = "";
+    mashiro_option.cookie_version_control = "";
+    mashiro_option.qzone_autocomplete = false;
+    mashiro_option.site_name = "樱花庄的風";
+    mashiro_option.author_name = "風";
+    mashiro_option.site_url = "https://kaze0617.gitee.io/";
+    mashiro_option.v_appId = "Aiy3G092H2AXI5Ad0mFMBugP-MdYXbMMI";
+    mashiro_option.v_appKey = "CoDqXAC8Qk2n7Nw1ikqhNmvk";
+    mashiro_option.mathjax = "0";
+    mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
+    mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+    // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+    // mashiro_option.float_player_on = true;
+
+    /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+    var bg = "/images/cover/0.webp,/images/cover/1.webp,/images/cover/2.webp,/images/cover/3.webp,/images/cover/4.webp,/images/cover/5.webp,/images/cover/6.webp,/images/cover/7.webp,/images/cover/8.webp".split(",");
+    var bgindex = Math.floor(Math.random() * bg.length);
+    if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+      alert('朋友，IE浏览器未适配哦~');
+    }
+  </script>
+  <style type="text/css">
+    .hljs-ln {
+      border-collapse: collapse
+    }
+
+    .hljs-ln td {
+      padding: 0
+    }
+
+    .hljs-ln-n:before {
+      content: attr(data-line-number)
+    }
+  </style>
+  <style type="text/css">
+    .site-top .lower nav {
+      display: block !important;
+    }
+
+    .author-profile i,
+    .post-like a,
+    .post-share .show-share,
+    .sub-text,
+    .we-info a,
+    span.sitename,
+    .post-more i:hover,
+    #pagination a:hover,
+    .post-content a:hover,
+    .float-content i:hover {
+      color: #FE9600
+    }
+
+    .feature i,
+    .download,
+    .navigator i:hover,
+    .links ul li:before,
+    .ar-time i,
+    span.ar-circle,
+    .object,
+    .comment .comment-reply-link,
+    .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
+      background: #FE9600
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #FE9600
+    }
+
+    .download,
+    .navigator i:hover,
+    .link-title,
+    .links ul li:hover,
+    #pagination a:hover,
+    .comment-respond input[type='submit']:hover {
+      border-color: #FE9600
+    }
+
+    .entry-content a:hover,
+    .site-info a:hover,
+    .comment h4 a,
+    #comments-navi a.prev,
+    #comments-navi a.next,
+    .comment h4 a:hover,
+    .site-top ul li a:hover,
+    .entry-title a:hover,
+    #archives-temp h3,
+    span.page-numbers.current,
+    .sorry li a:hover,
+    .site-title a:hover,
+    i.iconfont.js-toggle-search.iconsearch:hover,
+    .comment-respond input[type='submit']:hover {
+      color: #FE9600
+    }
+
+    .comments .comments-main {
+      display: block !important;
+    }
+
+    .comments .comments-hidden {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript">
+    if (("standalone" in window.navigator) && window.navigator.standalone) {
+      var noddy, remotes = false;
+      document.addEventListener('click', function (event) {
+        noddy = event.target;
+        while (noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if ('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !==
+            -1 || remotes)) {
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      }, false);
+    }
+  </script>
+  <link rel="apple-touch-icon-180x180" href="/apple-touch-icon-180x180.png">
+  <meta name="theme-color" content="white">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head></html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-grid">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, KAZE!">Hi, KAZE!</h1>
+        <!-- <a href="https://kaze0617.gitee.io/">
+          <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg">
+        </a> -->
+      </div>
+      <div class="header-info">
+        <p>No game no life !</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/kaze0617" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1515097306&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/social/qq.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://gitee.com/kaze0617" target="_blank" class="social-github" title="gitee">
+                    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/social/gitee.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container">
+    <video style="object-fit: fill" id="bgvideo" class="video" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink logo">
+            <a href="/">
+                <ruby>
+                <span class="sakuraso">さくら荘</span>
+                <span class="no">の</span>
+                <span class="shironeko">風</span>
+                <rp></rp>
+                <rt class="logo">樱花庄的風</rt>
+                <rp></rp>
+                </ruby>
+              </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+            <li>
+              <a href="/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                  首页
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/archives">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                  归档
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/技术/">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    技术
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/随笔/">
+                    <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                    随笔
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/转载/">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    转载
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-book faa-vertical" aria-hidden="true"></i>
+                  学习
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/Java/">
+                    <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                    JAVA
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="//categories/Java/">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    MCFORGE
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                  清单
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/tags/悦读/">
+                    <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                    书单
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/bangumi/">
+                    <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                    番组
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/music/">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                    歌单
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/tags/图集/">
+                    <i class="fa fa-photo" aria-hidden="true"></i>
+                    图集
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/comment/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                  留言板
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/links/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                  友人帐
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="/donate/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                  赞赏
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                  关于
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/about/">
+                    <i class="fa fa-meetup" aria-hidden="true"></i>
+                    我？
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/theme-sakura/">
+                    <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                    主题
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/lab/">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    Lab
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/client/">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                  客户端
+                </span>
+              </a>
+              
+            </li>
+            
+            <li>
+              <a href="javascript:;">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-apple faa-bounce" aria-hidden="true"></i>
+                  黑苹果
+                </span>
+              </a>
+              
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/categories/支持">
+                    <i class="fa fa-cogs  faa-pulse" aria-hidden="true"></i>
+                    支持
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/镜像">
+                    <i class="fa fa-arrow-circle-o-down faa-bounce" aria-hidden="true"></i>
+                    镜像
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/工具">
+                    <i class="fa fa-wrench faa-shake" aria-hidden="true"></i>
+                    工具
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/categories/完善">
+                    <i class="fa fa-check-circle faa-shake" aria-hidden="true"></i>
+                    完善
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a href="/atom.xml">
+                <span class="faa-parent animated-hover">
+                  <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                  RSS
+                </span>
+              </a>
+              
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div class="pattern-center single-center">
+  <!-- 有配图默认渲染第一张 -->
+  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/kext.jpg);"
+    src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/kext.jpg">
+  </div>
+  <header class="pattern-header single-header">
+    <h1 class="entry-title">
+      关于EFI中驱动的含义</h1>
+    <p class="entry-census">
+      <span>
+        <a href="/about/">
+          <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg">
+        </a>
+      </span>
+      <span>
+        <a href="/about/">KAZE</a>
+      </span>
+      <span class="bull">
+        ·</span>
+      2020-3-30<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+  </header>
+</div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1"
+        class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>转载自<a href="http://hac.fangf.cc/archives/349" target="_blank" rel="noopener">Hac的小窝</a></p>
+<center>知其然，知其所以然</center>
+
+<h3 id="必备驱动"><a href="#必备驱动" class="headerlink" title="必备驱动"></a><center>必备驱动</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">FakeSMC.kext</font></td>
+<td style="text-align:center">黑苹果必备驱动之一，用于仿冒苹果SMC设备的驱动文件。</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">VirtualSMC.kext</font></td>
+<td style="text-align:center">可替代你的FakeSMC.kext驱动的一个玩意儿。</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">Lilu.kext</font></td>
+<td style="text-align:center">黑苹果驱动扩展库，Lilu.kext驱动是黑苹果系统必不可缺的一款驱动；很多黑苹果驱动都需要依赖lilu.kext。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="有线网卡"><a href="#有线网卡" class="headerlink" title="有线网卡"></a><center>有线网卡</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">AppleRTL8169Ethernet</font></td>
+<td style="text-align:center">Realtek RTL8169 官方驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">AtherosE2200Ethernet.kext</font></td>
+<td style="text-align:center">高通 Atheros Killer E2200 系列驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">AtherosL1cEthernet.kext</font></td>
+<td style="text-align:center">高通 Atheros AR813x/815x 驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">IntelMausi.kext</font></td>
+<td style="text-align:center">英特尔有线网卡 Acidanthera 分支</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">IntelMausiEthernet.kext</font></td>
+<td style="text-align:center">英特尔有线网卡原作者</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">NullEthernetInjector.kext</font></td>
+<td style="text-align:center">仿冒内建网卡 (没有可用的内建网卡时使用)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">RealtekR1000SL.kext</font></td>
+<td style="text-align:center">Realtek 8111B/C/D/E/EP/F/G/GU/8411B 系列驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">RealtekRTL8100.kext</font></td>
+<td style="text-align:center">Realtek RTL810X 系列驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">RealtekRTL8111.kext</font></td>
+<td style="text-align:center">Realtek RTL8111/8168 系列驱动</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Wi-Fi-和-蓝牙"><a href="#Wi-Fi-和-蓝牙" class="headerlink" title="Wi-Fi 和 蓝牙"></a><center>Wi-Fi 和 蓝牙</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">AirPortAtheros40.kext</font></td>
+<td style="text-align:center">高通 Atheros AR92xx/AR93xx 驱动, 仅用于 10.14+</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">AirPortAtheros40.kext</font></td>
+<td style="text-align:center">高通 Atheros AR92xx/AR93xx 驱动, 仅用于 10.14+</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">AirportBrcmFixup.kext</font></td>
+<td style="text-align:center">非苹果官方博通网卡修复</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">ATH9KFixup.kext</font></td>
+<td style="text-align:center">高通 Atheros AR9xxx 无线网卡修复</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">rcmPatchRAM.kext</font></td>
+<td style="text-align:center">博通网卡蓝牙固件上传</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">BT4LEContinuityFixup.kext</font></td>
+<td style="text-align:center">IOBluetoothFamily 修补</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">MT7610</font></td>
+<td style="text-align:center">联发科 MT7610</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">RT5370</font></td>
+<td style="text-align:center">联发科 RT5370</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">RTL8192CU</font></td>
+<td style="text-align:center">Realtek RTL8192CU 驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">HoRNDIS.kext</font></td>
+<td style="text-align:center">解决你没有网络的痛苦。用手机连电脑，让电脑直接用手机上的数据网络上网。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="键盘-鼠标-和-触摸设备"><a href="#键盘-鼠标-和-触摸设备" class="headerlink" title="键盘, 鼠标 和 触摸设备"></a><center>键盘, 鼠标 和 触摸设备</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">ApplePS2SmartTouchPad.kext</font></td>
+<td style="text-align:center">触摸板和键盘</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">AsusSMC.kext</font></td>
+<td style="text-align:center">华硕 Fn 键, 键盘背光灯和环境光传感器 驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">NoTouchID.kext</font></td>
+<td style="text-align:center">禁用 Touch ID 检测, 修复输密码时卡顿</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">SerialMouse.kext</font></td>
+<td style="text-align:center">使用Microsoft 串行鼠标协议的串行鼠标驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">VoodooI2C.kext    I2C</font></td>
+<td style="text-align:center">触摸板/屏 驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">VoodooPS2Controller.kext</font></td>
+<td style="text-align:center">PS2 键盘/触摸板 驱动</td>
+</tr>
+</tbody>
+</table>
+<h3 id="显卡-和-声卡"><a href="#显卡-和-声卡" class="headerlink" title="显卡 和 声卡"></a><center>显卡 和 声卡</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">AppleALC.kext</font></td>
+<td style="text-align:center">定制万能声卡驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">AppleHDA.kext</font></td>
+<td style="text-align:center">Intel High Definition Audio高保真声卡驱动，大部分集成声卡,例如ALC889A声卡就可以直接用其驱动,禁止与VoodooHDA.kext一起使用！</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">NVIDIA CUDA drivers</font></td>
+<td style="text-align:center">NVIDIA CUDA 驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">NVIDIA Web-drivers</font></td>
+<td style="text-align:center">NVIDIA 显卡驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">SNBGraphicsMojaveInstaller</font></td>
+<td style="text-align:center">二代酷睿核显驱动, 仅用于 10.14+</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">VoodooHDA.kext</font></td>
+<td style="text-align:center">万能声卡驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">WhateverGreen.kext</font></td>
+<td style="text-align:center">修复黑苹果AMD/NVIDIA/Intel核显显卡黑屏、花屏、睡眠黑评估等各种问题补丁，需要与ilu.kext配合使用。</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">Polaris22Fixup.kext</font></td>
+<td style="text-align:center">Polaris22/VegaM 显卡修复</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">NvidiaGraphicsFixup.kext</font></td>
+<td style="text-align:center">黑苹果英伟达显卡驱动，解决黑屏、卡顿、驱动不了等问题，而且还添加了HDMI/DP音频输出等功能， 必须搭配最新的Lilu.kext使用。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CPU-和-SMC"><a href="#CPU-和-SMC" class="headerlink" title="CPU 和 SMC"></a><center>CPU 和 SMC</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">CPUFriend.kext</font></td>
+<td style="text-align:center">CPU 变频管理</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">FakeSMC.kext and sensors</font></td>
+<td style="text-align:center">Clover 官方 FakeSMC</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">HWPEnabler.kext</font></td>
+<td style="text-align:center">启用 HWP</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">NullCPUPowerManagement.kext</font></td>
+<td style="text-align:center">AMD 和虚拟机专用版本</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">OpcodeEmulator.kext</font></td>
+<td style="text-align:center">Opcode 模拟驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">TSCAdjustReset.kext</font></td>
+<td style="text-align:center">TSC 频率同步驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">VirtualSMC.kext 及传感器</font></td>
+<td style="text-align:center">Acidanthera 的 SMC 和传感器驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">VoodooTSCSync.kext</font></td>
+<td style="text-align:center">TSC 频率同步驱动</td>
+</tr>
+</tbody>
+</table>
+<h3 id="USB-和-其它接口"><a href="#USB-和-其它接口" class="headerlink" title="USB 和 其它接口"></a><center>USB 和 其它接口</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">IOElectrify.kext</font></td>
+<td style="text-align:center">在雷电 3 设备上启用常开电源</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">USBWakeFixup.kext</font></td>
+<td style="text-align:center">修复 Skylake 平台 USB 唤醒黑屏</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">SASMegaRAID.kext</font></td>
+<td style="text-align:center">LSI MegaRAID SAS 系列 RAID 控制器驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">Sinetek-rtsx.kext</font></td>
+<td style="text-align:center">Realtek RTSX SDHC 读卡器驱动</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">VoodooSDHC.kext</font></td>
+<td style="text-align:center">SDHC 读卡器驱动</td>
+</tr>
+</tbody>
+</table>
+<h3 id="其它驱动"><a href="#其它驱动" class="headerlink" title="其它驱动"></a><center>其它驱动</center></h3><table>
+<thead>
+<tr>
+<th style="text-align:center">驱动名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#e67474">AppleIntelInfo.kext</font></td>
+<td style="text-align:center">CPU / 核显 变频测试</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">HibernationFixup.kext</font></td>
+<td style="text-align:center">修复因 RTC 变量和 NVRAM 造成的睡眠问题</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">Lilu.kext</font></td>
+<td style="text-align:center">SDK &amp; Library</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">LiluFriend.kext</font></td>
+<td style="text-align:center">用于确保 Lilu 在 L/E 下正常加载</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">RTCMemoryFixup.kext</font></td>
+<td style="text-align:center">修复 BIOS CMOS (RTC) 内存和 AppleRTC 之间的冲突问题</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">NightShiftUnlocker.kext</font></td>
+<td style="text-align:center">解锁 NightShift</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#e67474">WebCamera.kext</font></td>
+<td style="text-align:center">某些旧设备的摄像头驱动</td>
+</tr>
+</tbody>
+</table>
+<style>
+    table th {
+    font-weight: bold; /*加粗*/
+    text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
+    background: #FE9600; /*背景色*/
+}
+    table tbody tr:nth-child(2n) {
+    background: #eee; 
+}
+    table {
+    width: 100%; /*表格宽度*/
+    max-width: 65em; /*表格最大宽度，避免表格过宽*/
+    border: 1px solid #dedede; /*表格外边框设置*/
+    margin: 15px auto; /*外边距*/
+    border-collapse: collapse; /*使用单一线条的边框*/
+    empty-cells: show; /*单元格无内容依旧绘制边框*/
+}
+table th,
+table td {
+  height: 35px; /*统一每一行的默认高度*/
+  border: 1px solid #dedede; /*内部边框样式*/
+  padding: 0 10px; /*内边距*/
+}
+table td {
+    font-weight: bold
+}
+</style>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/donate/WechatQR.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
+        </div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+              target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+              知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+        <div class="post-nepre half previous">
+          
+            <a href="/2020/03/31/黑苹果显卡免驱列表（10-x-10-14-x）/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/mojave.jpg"
+                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
+                  src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/mojave.jpg">
+              </div>
+              <span class="label">
+                Previous Post</span>
+              <div class="info">
+                <h3>
+                  黑苹果显卡免驱列表（10.x~10.14.x）</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+          
+          
+          
+          <div class="post-nepre half next">
+            
+              <a href="/2020/03/29/黑苹果AMDcpu支持列表/" rel="next">
+                <div class="background">
+                  <img class="lazyload" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/AMD.jpg"
+                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                    onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/article/AMD.jpg">
+                </div>
+                <span class="label">
+                  Next Post</span>
+                <div class="info">
+                  <h3>
+                    黑苹果AMD cpu支持列表</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+            
+      </section>
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg" itemprop="image"
+              alt="KAZE" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+              <a href="/about/" itemprop="url" rel="author">KAZE</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>爱折腾</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                // PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+            },
+            ROOT_URL: '/',
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 KAZE<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
+            class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a
+            href="https://2heng.xin/" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a
+            href="https://www.hojun.cn/" target="_blank"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo,
+          Hosted by Gitee and Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/InsightSearch.js"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/zoom.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/sakura-app.js"></script>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/js/Valine.min.js"></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = {
+      "pjax": "1",
+      "movies": {
+        "url": "https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3",
+        "name": "Apple.mp4",
+        "live": "close"
+      },
+      "windowheight": "fixed",
+      "codelamp": "close",
+      "ajaxurl": "",
+      "order": "asc",
+      "formpostion": "bottom"
+    };
+  } else {
+    var Poi = {
+      "pjax": "1",
+      "movies": {
+        "url": "https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3",
+        "name": "Apple.mp4",
+        "live": "open"
+      },
+      "windowheight": "auto",
+      "codelamp": "close",
+      "ajaxurl": "",
+      "order": "asc",
+      "formpostion": "bottom"
+    };
+  }
+  /* ]]> */
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/kaze0617/cdn@2.3/images/custom/avatar.jpg">
+  </div>
+  <p
+    style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">
+    樱花庄的風</p>
+  <p style="text-align: center;">
+    
+    
+    <a href="http://github.com/kaze0617" class="fa fa-github" target="_blank"
+      style="color: #333; margin-left:20px"></a>
+    
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=1515097306&site=qq&menu=yes" class="fa fa-qq" target="_blank"
+      style="color: #25c6fe; margin-left:20px"></a>
+    
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+    <li>
+      <a href="/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+          首页
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/archives">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+          归档
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/技术/">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            技术
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/随笔/">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            随笔
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/转载/">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            转载
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-book faa-vertical" aria-hidden="true"></i>
+          学习
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/Java/">
+            <i class="fa fa-file-code-o" aria-hidden="true"></i>
+            JAVA
+          </a>
+        </li>
+        
+        <li>
+          <a href="//categories/Java/">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            MCFORGE
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+          清单
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/tags/悦读/">
+            <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+            书单
+          </a>
+        </li>
+        
+        <li>
+          <a href="/bangumi/">
+            <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+            番组
+          </a>
+        </li>
+        
+        <li>
+          <a href="/music/">
+            <i class="fa fa-headphones" aria-hidden="true"></i>
+            歌单
+          </a>
+        </li>
+        
+        <li>
+          <a href="/tags/图集/">
+            <i class="fa fa-photo" aria-hidden="true"></i>
+            图集
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/comment/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+          留言板
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/links/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+          友人帐
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="/donate/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+          赞赏
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+          关于
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/about/">
+            <i class="fa fa-meetup" aria-hidden="true"></i>
+            我？
+          </a>
+        </li>
+        
+        <li>
+          <a href="/theme-sakura/">
+            <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+            主题
+          </a>
+        </li>
+        
+        <li>
+          <a href="/lab/">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            Lab
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/client/">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+          客户端
+        </span>
+      </a>
+      
+    </li>
+    
+    <li>
+      <a href="javascript:;">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-apple faa-bounce" aria-hidden="true"></i>
+          黑苹果
+        </span>
+      </a>
+      
+      <ul class="sub-menu">
+        
+        <li>
+          <a href="/categories/支持">
+            <i class="fa fa-cogs  faa-pulse" aria-hidden="true"></i>
+            支持
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/镜像">
+            <i class="fa fa-arrow-circle-o-down faa-bounce" aria-hidden="true"></i>
+            镜像
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/工具">
+            <i class="fa fa-wrench faa-shake" aria-hidden="true"></i>
+            工具
+          </a>
+        </li>
+        
+        <li>
+          <a href="/categories/完善">
+            <i class="fa fa-check-circle faa-shake" aria-hidden="true"></i>
+            完善
+          </a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li>
+      <a href="/atom.xml">
+        <span class="faa-parent animated-hover">
+          <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+          RSS
+        </span>
+      </a>
+      
+    </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i
+    class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    switch="true"
+
+    id="7527603935"
+
+    server="tencent"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.2"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  
+</body>
+</html>
